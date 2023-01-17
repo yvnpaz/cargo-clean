@@ -31,7 +31,7 @@ import static org.assertj.core.groups.Tuple.tuple;
 
  */
 
-@SpringJUnitConfig(classes = {DefaultDbEntityMapperImpl.class, CommonMapStructConverters.class})
+@SpringJUnitConfig(classes = {com.github.cargoclean.infrastructure.adapter.db.map.DefaultDbEntityMapperImpl.class, CommonMapStructConverters.class})
 public class DefaultDbEntityMapperTest {
 
     @Autowired
@@ -44,7 +44,7 @@ public class DefaultDbEntityMapperTest {
         final LocationDbEntity dbEntity = LocationDbEntity.builder()
                 .unlocode("JNTKO")
                 .name("Tokyo")
-                .region("Asia")
+                .region("ASIA")
                 .build();
 
         final Location location = mapper.convert(dbEntity);

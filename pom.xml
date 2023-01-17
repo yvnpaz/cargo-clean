@@ -31,6 +31,7 @@
         <bootstrap.icons.version>1.9.1</bootstrap.icons.version>
         <archunit.version>0.23.1</archunit.version>
         <springdoc.openapi.ui.version>1.6.11</springdoc.openapi.ui.version>
+        <jacoco.version>0.8.8</jacoco.version>
     </properties>
     <dependencies>
 
@@ -145,6 +146,12 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>${jacoco.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -207,6 +214,28 @@
                     </excludes>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco.version}</version>
+                <executions>
+                    <execution>
+                        <id>jacoco-initialize</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>jacoco-site</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 
