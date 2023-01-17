@@ -70,7 +70,7 @@ public class DbPersistenceGatewayTestIT {
                 .extracting(Location::getUnlocode,
                         Location::getName,
                         Location::getRegion)
-                .contains(tuple(UnLocode.of("USNYC"), "New York", Region.NorthAmerica));
+                .contains(tuple(UnLocode.of("USNYC"), "New York", Region.NORTH_AMERICA));
 
         // locations should not be modifiable
 

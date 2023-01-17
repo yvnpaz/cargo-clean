@@ -4,13 +4,13 @@ import com.github.cargoclean.core.model.Assert;
 import com.github.cargoclean.core.model.InvalidDomainObjectError;
 
 public enum Region {
-    Unknown("Unknown"),
-    Africa("Africa"),
-    Asia("Asia"),
-    Oceania("Oceania"),
-    Europe("Europe"),
-    NorthAmerica("North America"),
-    SouthAmerica("South America");
+    UNKNOWN("Unknown"),
+    AFRICA("Africa"),
+    ASIA("Asia"),
+    OCEANIA("Oceania"),
+    EUROPE("Europe"),
+    NORTH_AMERICA("North America"),
+    SOUTH_AMERICA("South America");
 
     public static Region of(String regionName) {
         try {
