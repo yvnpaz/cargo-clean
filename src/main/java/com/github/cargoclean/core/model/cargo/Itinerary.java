@@ -49,7 +49,7 @@ public class Itinerary {
     }
 
     public Leg last() {
-        return legs.stream().skip(legs.size() - 1).findFirst().orElse(null);
+        return legs.stream().skip((long)legs.size() - 1).findFirst().orElse(null);
     }
 
     public List<Leg> intermediate() {
